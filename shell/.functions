@@ -81,7 +81,7 @@ function weather() {
    eval "curl http://wttr.in/${city}"
 }
 
-alias mysqladm='mysql -u root'
+alias mysqladm='mysql -u root -p'
 
 # Scrape a single webpage with all assets
 function scrapeUrl() {
@@ -121,13 +121,13 @@ xdebug() {
 
 function db {
     if [ "$1" = "refresh" ]; then
-        mysql -uroot -e "drop database $2; create database $2"
+        mysql -u root -p -e "drop database $2; create database $2"
     elif [ "$1" = "create" ]; then
-        mysql -uroot -e "create database $2"
+        mysql -u root -p -e "create database $2"
     elif [ "$1" = "drop" ]; then
-        mysql -uroot -e "drop database $2"
+        mysql -u root -p -e "drop database $2"
     elif [ "$1" = "list" ]; then
-        mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
+        mysql -u root -p -e "show databases" | perl -p -e's/\|| *//g'
     fi
 }
 
@@ -159,3 +159,33 @@ function silent() {
    "$@" >& /dev/null
 }
 
+alias mysqltop=watch -n1 'mysql -u tmp_user -p tmp_user_passwd_2102394567 --exec="SHOW PROCESSLIST"'
+
+function set71 {
+  alias php='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php7.1.33/bin:$PATH
+}
+
+function set72 {
+  alias php='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php7.2.34/bin:$PATH
+}
+
+function set73 {
+  alias php='/Applications/MAMP/bin/php/php7.3.24/bin/php -c "/Applications/MAMP/bin/php/php7.3.24/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php7.3.24/bin:$PATH
+}
+
+function set74 {
+  alias php='/Applications/MAMP/bin/php/php7.4.26/bin/php -c "/Applications/MAMP/bin/php/php7.4.26/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php7.4.26/bin:$PATH
+}
+
+function set80 {
+  alias php='/Applications/MAMP/bin/php/php8.0.12/bin/php -c "/Applications/MAMP/bin/php/php8.0.12/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php8.0.12/bin:$PATH
+
+function set81 {
+  alias php='/Applications/MAMP/bin/php/php8.1.0/bin/php -c "/Applications/MAMP/bin/php/php8.1.0/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php8.1.0/bin:$PATH
+}

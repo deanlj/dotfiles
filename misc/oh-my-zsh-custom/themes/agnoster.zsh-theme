@@ -47,12 +47,15 @@ prompt_segment() {
 # End the prompt, closing any open segments
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+      print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
   else
-    echo -n "%{%k%}"
+      print -n "%{%k%}"
   fi
-  echo -n "%{%f%}"
+  print -n "%{%f%}"
   CURRENT_BG=''
+
+  #Adds the new line and ⚡ as the start character.
+  printf "\n⚡";
 }
 
 ### Prompt components

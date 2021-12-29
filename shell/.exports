@@ -1,5 +1,5 @@
-# Make vim the default editor
-export EDITOR="vim"
+# Make nano the default editor
+export EDITOR="nano"
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -10,9 +10,9 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 # And include the parameter for ZSH
 export HISTORY_IGNORE="(ls|cd|cd -|pwd|exit|date|* --help)"
 
-# Prefer US English and use UTF-8
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+# Prefer UK English and use UTF-8
+export LANG="en_GB.UTF-8"
+export LC_ALL="en_GB.UTF-8"
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="$ORANGE"
@@ -25,3 +25,24 @@ export GREP_OPTIONS="--color=auto"
 
 # Do not auto update brew
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+export PATH=/Applications/MAMP/Library/bin:$PATH
+
+export PATH=$HOME/.composer/vendor/bin:$PATH
+
+export COMPOSER_MEMORY_LIMIT=-1
+
+export NGROK_AUTH=
+
+# STRIPE
+export SK_CS=
+export SK_PROD_CS=
+export SK_AM=
+export SK_PROD_AM=
+export SK_DNSB=
+export SK_PROD_DNSB=
+
+# Localstack
+LOCALSTACK_SERVICES=serverless,cloudformation
+DATA_DIR=$HOME/Dev/data/localstack
+export LOCALSTACK_API_KEY=

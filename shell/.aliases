@@ -1,26 +1,71 @@
+# Shell
+# Easier navigation
+alias up1="cd .."
+alias up2="cd ../.."
+alias up3="cd ../../.."
+alias up4="cd ../../../.."
+alias up5="cd ../../../../.."
+alias up6="cd ../../../../../.."
+
+alias ll='ls -laGF'
+alias la='ls -laGF'
+alias l="ls -laGF"
+
+alias cls=clear
+
+# quick hosts
+alias ehosts="sudo nano /etc/hosts"
+alias hostfile="sudo nano /etc/hosts"
+alias hosts="less /etc/hosts"
+
+# SSH - clear loaded keys, edit config. copy key to clipboard
+alias ck="ssh-add -D"
+alias sshconfig="nano ~/.ssh/config"
+alias copykey='command cat ~/.ssh/personal/deanlj.me.pub | pbcopy'
+alias makekey='ssh-keygen -t ed25519'
+
+# MAMP PHP Versions
+alias php71='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
+alias php72='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
+alias php73='/Applications/MAMP/bin/php/php7.3.29/bin/php -c "/Applications/MAMP/bin/php/php7.3.29/conf/php.ini"'
+alias php74='/Applications/MAMP/bin/php/php7.4.26/bin/php -c "/Applications/MAMP/bin/php/php7.4.26/conf/php.ini"'
+
+alias php80='/Applications/MAMP/bin/php/php8.0.12/bin/php -c "/Applications/MAMP/bin/php/php8.0.12/conf/php.ini"'
+alias php81='/Applications/MAMP/bin/php/php8.1.0/bin/php -c "/Applications/MAMP/bin/php/php8.1.0/conf/php.ini"'
+alias php='/Applications/MAMP/bin/php/php8.1.0/bin/php -c "/Applications/MAMP/bin/php/php8.1.0/conf/php.ini"'
+
+
+alias pecl71='/Applications/MAMP/bin/php/php7.1.33/bin/pecl'
+alias pecl72='/Applications/MAMP/bin/php/php7.2.34/bin/pecl'
+alias pecl73='/Applications/MAMP/bin/php/php7.3.29/bin/pecl'
+alias pecl74='/Applications/MAMP/bin/php/php7.4.26/bin/pecl'
+alias pecl80='/Applications/MAMP/bin/php/php8.0.12/bin/pecl'
+alias pecl81='/Applications/MAMP/bin/php/php8.1.0/bin/pecl'
+
+alias pear74='/Applications/MAMP/bin/php/php7.4.21/bin/pear'
+alias pear80='/Applications/MAMP/bin/php/php8.0.12/bin/pear'
+alias pear81='/Applications/MAMP/bin/php/php8.1.0/bin/pear'
+
 # PHP
-alias phpunit="vendor/bin/phpunit"
-alias phpunitw="phpunit-watcher watch"
-alias a="php artisan"
-alias ar="php artisan remote"
-alias c="composer"
-alias cu="composer update"
-alias cr="composer require"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
+alias pu="vendor/bin/phpunit"
+alias puw="phpunit-watcher watch"
+alias art="php artisan"
+alias artr="php artisan remote"
+alias comp="composer"
+alias compup="composer update"
+alias compreq="composer require"
+alias compi="composer install"
+alias compdump="composer dump-autoload -o"
 alias larastan="vendor/bin/phpstan analyse"
-alias hostfile="sudo vi /etc/hosts"
-alias deploy='envoy run deploy'
-alias deploy-code='envoy run deploy-code'
+alias deploydev='php deploy dev -vvv'
+alias deployqa='php deploy qa -vvv'
+alias deployuat='php deploy uat -vvv'
+alias deployprod='php deploy prod -vvv'
 alias mfs='php artisan migrate:fresh --seed'
-alias nah='git reset --hard;git clean -df'
+alias refresh='php artisan migrate:refresh --seed'
 
 alias pp="php artisan test --parallel"
-alias d="php artisan dusk"
-alias sshconfig="vi ~/.ssh/config"
-alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
-alias sail='./vendor/bin/sail'
-alias tunnel='valet share -subdomain=freekmurze -region=eu'
+alias dusk="php artisan dusk"
 
 # JavaScript
 alias jest="./node_modules/.bin/jest"
@@ -29,20 +74,19 @@ alias jest="./node_modules/.bin/jest"
 alias gc="git checkout"
 alias gpo="git push origin"
 alias gm="git merge"
+alias gr="git rebase "
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gnah='git reset --hard;git clean -df'
+alias gcdev='git checkout develop'
+alias gcmain='git checkout main'
+alias grem="git remote -v"
 
 # Fast open
 alias o="open ."
 
-# List all files colorized in long format
-alias l="ls -laF"
-
 # PhpStorm
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-
-# PHP
-alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"
-alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
+# alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias genide="art clear-compiled && art ide-helper:generate && art ide-helper:meta && art optimize"
 
 # Redis
 alias flush-redis="redis-cli FLUSHALL"
@@ -51,8 +95,8 @@ alias flush-redis="redis-cli FLUSHALL"
 alias code='open -a "/Applications/Visual Studio Code.app" "`pwd`"'
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # IP addresses
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
@@ -78,5 +122,8 @@ alias scrape="scrapeUrl"
 alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
 
-# Restart touch bar
-alias touchbar="killall ControlStrip"
+# Docker aliases
+alias dcomp="docker-compose "
+alias dclean="docker rm $(docker ps -aq)"
+
+
