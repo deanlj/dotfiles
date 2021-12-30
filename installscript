@@ -93,5 +93,5 @@ echo '1. Make sure dropbox is running first. If you have not backed up via Macku
 echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '3. Make a .dotfiles-custom/shell/.aliases for your personal commands'
 
-echo '++++++++++++++++++++++++++++++'
-echo '++++++++++++++++++++++++++++++'
+echo '--=========================================================--'
+
