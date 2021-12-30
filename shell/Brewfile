@@ -41,14 +41,18 @@ brew 'yarn'
 brew 'zsh-autosuggestions'
 
 
+# adobe-creative-cloud
 # Apps
 # AWS Schema Conversion Tool
 # Balsamiq Mockups 3.app
 # Camtasia 2019.app
-# adobe-creative-cloud
 # Doodly
+# Elgato Stream Deck
+# Sizzy
 # Sonos
+# Stripe-mock
 # Tag Editor
+# Teams
 # Vemto
 cask 'caffeine'
 cask 'clamxav'
@@ -145,7 +149,7 @@ mas 'Spark', id: 1176895641
 mas 'Speedtest', id: 1153157709
 mas 'Synalyze It! Pro', id: 475193367
 mas 'Trello', id: 1278508951
-mas 'Tag Editor', id: 984278082
+mas 'Tag Editor Free', id: 984278082
 mas 'The Unarchiver', id: 425424353
-mas 'Tweetbot', id: 1384080005
+mas 'Tweetdeck', id: 485812721
 mas 'Xcode', id: 497799835

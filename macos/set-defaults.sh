@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+set -e
+
 echo 'start osx/set-defaults.sh'
 
 # Ask for the administrator password upfront
@@ -553,25 +556,17 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ###############################################################################
-# Tweetbot.app                                                                #
-###############################################################################
-
-# Bypass the annoyingly slow t.co URL shortener
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
 for app in "Activity Monitor" \
     "Address Book" \
+    "Brave Browser" \
     "Calendar" \
     "cfprefsd" \
     "Contacts" \
     "Dock" \
     "Finder" \
-    "Google Chrome Canary" \
-    "Google Chrome" \
     "Mail" \
     "Messages" \
     "Opera" \
@@ -580,9 +575,9 @@ for app in "Activity Monitor" \
     "SizeUp" \
     "Spectacle" \
     "SystemUIServer" \
+    "TablePlus" \
     "Terminal" \
-    "Transmission" \
-    "Tweetbot" \
+    "Tower" \
     "Twitter" \
     "iCal"; do
     killall "${app}" &> /dev/null
