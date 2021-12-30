@@ -62,7 +62,7 @@ brew link --overwrite --force php@8.0
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $DOTFILES/shell/Brewfile
+brew bundle --file $HOME/.dotfiles/shell/Brewfile
 
 echo '--=========================================================--'
 echo '-- Install composer'
