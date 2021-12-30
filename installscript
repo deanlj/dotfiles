@@ -57,6 +57,13 @@ fi
 # Update Homebrew recipes
 brew update
 
+echo '--=========================================================--'
+echo 'Install php'
+echo '--=========================================================--'
+brew tap shivammathur/php
+brew install shivammathur/php/php@8.0
+brew link --overwrite --force php@8.0
+
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --file $DOTFILES/shell/Brewfile
