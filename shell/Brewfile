@@ -5,6 +5,7 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
 tap 'stripe/stripe-cli'
+tap 'stripe/stripe-mock'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -72,7 +73,7 @@ cask 'figma'
 cask 'firefox'
 cask 'gpg-suite'
 cask 'helo'
-cask 'homebrew/cask-drivers/elgato-stream-deck'
+# cask 'homebrew/cask-drivers/elgato-stream-deck'
 cask 'iconjar'
 cask 'imageoptim'
 cask 'insomnia'
