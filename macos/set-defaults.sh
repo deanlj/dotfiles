@@ -114,10 +114,72 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
+# Setup up trackpad how we like it
+# bottom right corner click for context menu
+defaults write -g ContextMenuGesture -bool TRUE
+defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool FALSE
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2;
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick-bool FALSE
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool FALSE
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool FALSE
+
+# Silent Clicking on
+defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -bool FALSE
+
+# Force click and haptic feedback off
+defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool FALSE
+defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool TRUE
+
+# Lookup and Data Detectors on with 3 finger tap
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
+
+# Natural scroll direction
+defaults write -g com.apple.swipescrolldirection -bool TRUE
+
+# Zoom in and out with 2 finger pinch
+defaults write com.apple.AppleMultitouchTrackpad TrackpadPinch -bool TRUE
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -bool TRUE
+
+# Smart Zoom
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerDoubleTapGesture -bool TRUE
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -bool TRUE
+
+# Rotate
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRotate -bool TRUE
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool TRUE
+
+# Swipe between pages with 3 finger swipe
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+
+# Swipe between full-screen apps with 3 finger swipe
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+
+# Notification center
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3
+
+# Mission Control
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+
+# App Expose
+defaults write com.apple.dock showAppExposeGestureEnabled -bool TRUE
+
+# Launchpad
+defaults write com.apple.dock showLaunchpadGestureEnabled -bool TRUE
+
+# Show Desktop
+defaults write com.apple.dock showDesktopGestureEnabled -bool TRUE
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -256,6 +318,7 @@ defaults write com.apple.dock minimize-to-application -bool true
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array ""
+defaults read com.apple.dock persistent-apps
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
@@ -298,8 +361,8 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 # defaults write com.apple.dock wvous-tl-corner -int 2
 # defaults write com.apple.dock wvous-tl-modifier -int 0
 # Top right screen corner → Desktop
-defaults write com.apple.dock wvous-tr-corner -int 10
-defaults write com.apple.dock wvous-tr-modifier -int 0
+#defaults write com.apple.dock wvous-tr-corner -int 10
+#defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Start screen saver
 # defaults write com.apple.dock wvous-bl-corner -int 5
 # defaults write com.apple.dock wvous-bl-modifier -int 0

@@ -1,0 +1,20 @@
+Home
+Dropbox
+Dev
+Courses
+-- Projects
+    --
+    --
+Applications
+Desktop
+Documents
+Recents
+AirDrop
+Pictures
+Downloads
+.aws
+.ssh
+.ssl
+Library
+Movies
+

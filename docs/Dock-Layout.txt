@@ -1,0 +1,18 @@
+Outlook
+Teams
+Calendar
+Notion
+Bear Notes
+Apple Notes
+BB Edit
+MAMP Pro
+Brave
+Trello
+PHPStorm
+Tinkerwell
+TablePlus
+Tower
+iTerm2
+Sonos // Manual install
+Slack
+Lastpass
