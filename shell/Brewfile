@@ -145,7 +145,7 @@ mas 'Pages', id: 409201541
 mas 'Pluralsight', id: 431748264
 mas 'RDM - Redis Desktop Manager', id: 1475905948
 mas 'SiteSucker', id: 442168834
-mas 'Spark', id: 1176895641
+# mas 'Spark', id: 1176895641
 mas 'Speedtest', id: 1153157709
 mas 'Synalyze It! Pro', id: 475193367
 mas 'Trello', id: 1278508951
