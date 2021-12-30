@@ -43,16 +43,15 @@ cd ~/.dotfiles/shell
 chmod +x z.sh
 
 # Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
-  echo '--=========================================================--'
-  echo 'Install homebrew'
-  echo '--=========================================================--'
-  echo install homebrew
-  sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/freek/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+
+echo '--=========================================================--'
+echo 'Install homebrew'
+echo '--=========================================================--'
+echo install homebrew
+sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Update Homebrew recipes
 brew update
