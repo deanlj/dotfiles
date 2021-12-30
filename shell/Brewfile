@@ -98,7 +98,6 @@ cask 'postman'
 cask 'raspberry-pi-imager'
 cask 'remote-desktop-manager-free'
 cask 'telegram-desktop'
-cask 'the-unarchiver'
 cask 'tinkerwell'
 cask 'toggl-track'
 cask 'tower'
@@ -147,5 +146,6 @@ mas 'Speedtest', id: 1153157709
 mas 'Synalyze It! Pro', id: 475193367
 mas 'Trello', id: 1278508951
 mas 'Tag Editor', id: 984278082
+mas 'The Unarchiver', id: 425424353
 mas 'Tweetbot', id: 1384080005
 mas 'Xcode', id: 497799835
