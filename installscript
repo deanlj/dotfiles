@@ -8,7 +8,7 @@ touch $HOME/.hushlogin
 
 # Install oh-my-zsh
 echo '--=========================================================--'
-echo 'Install oh-my-zsh'
+echo '--= Install oh-my-zsh'                                    =--
 echo '--=========================================================--'
 
 rm -rf $HOME/.oh-my-zsh
@@ -42,7 +42,7 @@ chmod +x z.sh
 # Check for Homebrew and install if we don't have it
 
 echo '--=========================================================--'
-echo 'Install homebrew'
+echo '--= Install homebrew'                                     =--'
 echo '--=========================================================--'
 echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
@@ -54,7 +54,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 
 echo '--=========================================================--'
-echo 'Install php'
+echo '--= Install php'                                          =--'
 echo '--=========================================================--'
 brew tap shivammathur/php
 brew install shivammathur/php/php@8.0
@@ -65,7 +65,7 @@ brew tap homebrew/bundle
 brew bundle --file $HOME/.dotfiles/shell/Brewfile
 
 echo '--=========================================================--'
-echo '-- Install composer'
+echo '-- Install composer'                                      =--'
 echo '--=========================================================--'
 EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -81,7 +81,7 @@ rm composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo '--=========================================================--'
-echo '-- All done!'
+echo '--= All done!'                                            =--'
 echo '--=========================================================--'
 
 echo 'Things to do to make the agnoster terminal theme work:'
@@ -89,12 +89,28 @@ echo '1. Install menlo patched font included in ~/.dotfiles/misc https://gist.gi
 echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 
 echo '--=========================================================--'
-echo '-- Some optional tidbits'
+echo '-- Some optional tidbits'                                 =--'
 echo '--=========================================================--'
 
-echo '1. Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You'\''ll find more info on Mackup here: https://github.com/lra/mackup.'
-echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
-echo '3. Make a .dotfiles-custom/shell/.aliases for your personal commands'
+echo 'Manully install the following:'
+echo 'Adobe Creative Cloud'
+echo 'AWS Schema Conversion Tool'
+echo 'Balsamiq Mockups 3'
+echo 'Camtasia 2019'
+echo 'Doodly'
+echo 'Rosetta'
+echo 'Elgato Stream Deck'
+echo 'Sizzy'
+echo 'Sonos'
+echo 'Stripe-mock'
+echo 'Teams'
+echo 'Vemto'
+echo ' '
+echo '- Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You'\''ll find more info on Mackup here: https://github.com/lra/mackup.'
+echo '- Set some sensible macOS X defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
+echo '- Install the powerline fonts by running $HOME/.dotfiles/macos/install-fonts.sh'
+echo '- Setup the dock with the usual apps by running $HOME/.dotfiles/macos/setup-dock.sh'
+echo '- If this is an M1/Mx mac, run $HOME/.dotfiles/installm1'
 
 echo '--=========================================================--'
 
