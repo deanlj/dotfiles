@@ -8,7 +8,7 @@ touch $HOME/.hushlogin
 
 # Install oh-my-zsh
 echo '--=========================================================--'
-echo '--= Install oh-my-zsh'                                    =--
+echo '--= Install oh-my-zsh                                     =--'
 echo '--=========================================================--'
 
 rm -rf $HOME/.oh-my-zsh
@@ -42,7 +42,7 @@ chmod +x z.sh
 # Check for Homebrew and install if we don't have it
 
 echo '--=========================================================--'
-echo '--= Install homebrew'                                     =--'
+echo '--= Install homebrew                                      =--'
 echo '--=========================================================--'
 echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
@@ -54,7 +54,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 
 echo '--=========================================================--'
-echo '--= Install php'                                          =--'
+echo '--= Install php                                           =--'
 echo '--=========================================================--'
 brew tap shivammathur/php
 brew install shivammathur/php/php@8.0
@@ -65,7 +65,7 @@ brew tap homebrew/bundle
 brew bundle --file $HOME/.dotfiles/shell/Brewfile
 
 echo '--=========================================================--'
-echo '-- Install composer'                                      =--'
+echo '-- Install composer                                       =--'
 echo '--=========================================================--'
 EXPECTED_COMPOSER_CHECKSUM="$(curl https://composer.github.io/installer.sig)"
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -81,7 +81,7 @@ rm composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo '--=========================================================--'
-echo '--= All done!'                                            =--'
+echo '--= All done!                                             =--'
 echo '--=========================================================--'
 
 echo 'Things to do to make the agnoster terminal theme work:'
@@ -89,7 +89,7 @@ echo '1. Install menlo patched font included in ~/.dotfiles/misc https://gist.gi
 echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 
 echo '--=========================================================--'
-echo '-- Some optional tidbits'                                 =--'
+echo '-- Some optional tidbits                                  =--'
 echo '--=========================================================--'
 
 echo 'Manully install the following:'
