@@ -43,7 +43,6 @@ brew 'zsh-autosuggestions'
 
 
 # adobe-creative-cloud
-# Apps
 # AWS Schema Conversion Tool
 # Balsamiq Mockups 3.app
 # Camtasia 2019.app
@@ -55,6 +54,7 @@ brew 'zsh-autosuggestions'
 # Tag Editor
 # Teams
 # Vemto
+# Apps
 cask 'caffeine'
 cask 'clamxav'
 cask 'balenaetcher'
