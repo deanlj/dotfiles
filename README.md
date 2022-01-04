@@ -3,8 +3,10 @@
 My personal dotfiles. 
 
 Based on the excellent dotfiles from Freek and Dries
-[https://freekmurze.github.io/dotfiles](https://freekmurze.github.io/dotfiles]
-[https://freekmurze.github.io/dotfiles](https://freekmurze.github.io/dotfiles)
+
+[https://github.com/freekmurze/dotfiles](https://github.com/freekmurze/dotfiles)
+
+[https://github.com/driesvints/dotfiles](https://github.com/driesvints/dotfiles)
 
 It contains the installation of some basic tools, Mac Apps and some handy aliases and functions. 
 
