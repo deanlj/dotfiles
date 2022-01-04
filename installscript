@@ -81,6 +81,11 @@ rm composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo '--=========================================================--'
+echo '--= Install XCode Command line tools                      =--'
+echo '--=========================================================--'
+xcode-select --install
+
+echo '--=========================================================--'
 echo '--= All done!                                             =--'
 echo '--=========================================================--'
 
