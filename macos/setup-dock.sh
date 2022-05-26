@@ -18,13 +18,13 @@ __dock_item() {
 
 printf '%s' 'Setting up Dock icons...'
 defaults write com.apple.dock \
-               persistent-apps -array "$(__dock_item /Applications/Microsoft Outlook.app)" \
-                                      "$(__dock_item /Applications/Calendar.app)" \
+               persistent-apps -array "$(__dock_item '/Applications/Microsoft Outlook.app')" \
+                                      "$(__dock_item /System/Applications/Calendar.app)" \
                                       "$(__dock_item /Applications/Bear.app)" \
                                       "$(__dock_item /Applications/Notes.app)" \
                                       "$(__dock_item /Applications/BBEdit.app)" \
-                                      "$(__dock_item /Applications/MAMP PRO.app)" \
-                                      "$(__dock_item /Applications/Brave Browser.app)" \
+                                      '$(__dock_item "/Applications/MAMP PRO.app")' \
+                                      '$(__dock_item "/Applications/Brave Browser.app")' \
                                       "$(__dock_item /Applications/Trello.app)" \
                                       "$(__dock_item /Applications/Tinkerwell.app)" \
                                       "$(__dock_item /Applications/TablePlus.app)" \

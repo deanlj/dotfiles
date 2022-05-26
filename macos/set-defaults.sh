@@ -21,7 +21,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "Macbook DeanLJ"
 sudo scutil --set HostName "Macbook DeanLJ"
-sudo scutil --set LocalHostName "Macbook DeanLJ"
+# sudo scutil --set LocalHostName "Macbook DeanLJ"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Macbook DeanLJ"
 
 
@@ -276,7 +276,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+# chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 # Show the ~/Users folder
 chflags nohidden /Users

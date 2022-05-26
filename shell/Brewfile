@@ -34,14 +34,17 @@ brew 'gifsicle'
 # Development
 brew 'aws-cfn-tools'
 brew 'awscli'
+brew 'aws-cdk'
 brew 'cfn-lint' # Cloudformation linter
 brew 'fabric'
 brew 'go'
 brew 'imagemagick'
 brew 'ghostscript'
+brew 'localstack'
 brew 'nvm'
 brew 'rust'
 brew 'terraform'
+brew 'typescript'
 brew 'yarn'
 brew 'zsh-autosuggestions'
 

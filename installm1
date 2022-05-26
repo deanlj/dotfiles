@@ -3,4 +3,4 @@
 echo "Setting up your M1 Mac..."
 
 # Install Rosetta on M1
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license (root permission required)
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
