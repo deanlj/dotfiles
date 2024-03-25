@@ -46,3 +46,6 @@ export SK_PROD_DNSB=
 LOCALSTACK_SERVICES=serverless,cloudformation
 DATA_DIR=$HOME/Dev/data/localstack
 export LOCALSTACK_API_KEY=
+
+# Latest NPM
+export PATH=/Users/deanlj/.nvm/versions/node/v18.12.1/bin:$PATH

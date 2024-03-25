@@ -15,7 +15,7 @@ DEFAULT_USER=`whoami`
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git laravel5 composer macos vagrant)
+plugins=(aliases ansible aws git colorize laravel5 composer copypath copyfile copybuffer dirhistory macos kubectl history emoji encode64 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,7 +61,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 . $HOME/.dotfiles/shell/z.sh
 
 # Alias hub to git
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -89,6 +89,10 @@ export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  
 
 #export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"

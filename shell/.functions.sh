@@ -89,7 +89,7 @@ function scrapeUrl() {
 }
 
 function rector() {
-   docker run -v $(pwd):/project rector/rector:latest process /project/$1 --set php80 --autoload-file /project/vendor/autoload.php
+   docker run -v $(pwd):/project rector/rector:latest process /project/$1 --set php80 --autoload-file /project/vendor/autoload.php 
 }
 
 #  Commit everything
@@ -106,7 +106,7 @@ function commit() {
 
 xdebug() {
    iniFileLocation="/usr/local/etc/php/7.4/php.ini";
-
+   
    currentLine=`cat $iniFileLocation | grep xdebug.so`
 
    if [[ $currentLine =~ ^#zend_extension ]];
@@ -187,16 +187,6 @@ function set80() {
 }
 
 function set81() {
-  alias php='/Applications/MAMP/bin/php/php8.1.13/bin/php -c "/Applications/MAMP/bin/php/php8.1.13/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.1.13/bin:$PATH
-}
-
-function set82() {
-  alias php='/Applications/MAMP/bin/php/php8.2.4/bin/php -c "/Applications/MAMP/bin/php/php8.2.4/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.2.4/bin:$PATH
-}
-
-function set83() {
-  alias php='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.3.0/bin:$PATH
+  alias php='/Applications/MAMP/bin/php/php8.1.1/bin/php -c "/Applications/MAMP/bin/php/php8.1.1/conf/php.ini"'
+  export PATH=/Applications/MAMP/bin/php/php8.1.1/bin:$PATH
 }
