@@ -150,7 +150,7 @@ prompt_status() {
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
-
+# oh-my-posh config export --output ~/.dotfiles/shell/deanlj.omp.json
 ## Main prompt
 build_prompt() {
   RETVAL=$?

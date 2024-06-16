@@ -16,9 +16,9 @@ function pf() {
 }
 
 # Docker
-function ssh-docker() {
-   docker exec -it "$@" bash
-}
+# function ssh-docker() {
+#    docker exec -it "$@" bash
+# }
 
 # Create a new directory and enter it
 function mkd() {
@@ -88,9 +88,9 @@ function scrapeUrl() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
 
-function rector() {
-   docker run -v $(pwd):/project rector/rector:latest process /project/$1 --set php80 --autoload-file /project/vendor/autoload.php
-}
+# function rector() {
+#    docker run -v $(pwd):/project rector/rector:latest process /project/$1 --set php80 --autoload-file /project/vendor/autoload.php
+# }
 
 #  Commit everything
 function commit() {
@@ -161,42 +161,42 @@ function silent() {
 
 alias mysqltop=watch -n1 'mysql -u tmp_user -p tmp_user_passwd_2102394567 --exec="SHOW PROCESSLIST"'
 
-function set71() {
-  alias php='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php7.1.33/bin:$PATH
-}
+# function set71() {
+#   alias php='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php7.1.33/bin:$PATH
+# }
 
-function set72() {
-  alias php='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php7.2.34/bin:$PATH
-}
+# function set72() {
+#   alias php='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php7.2.34/bin:$PATH
+# }
 
-function set73() {
-  alias php='/Applications/MAMP/bin/php/php7.3.24/bin/php -c "/Applications/MAMP/bin/php/php7.3.24/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php7.3.24/bin:$PATH
-}
+# function set73() {
+#   alias php='/Applications/MAMP/bin/php/php7.3.24/bin/php -c "/Applications/MAMP/bin/php/php7.3.24/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php7.3.24/bin:$PATH
+# }
 
-function set74() {
-  alias php='/Applications/MAMP/bin/php/php7.4.27/bin/php -c "/Applications/MAMP/bin/php/php7.4.27/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php7.4.27/bin:$PATH
-}
+# function set74() {
+#   alias php='/Applications/MAMP/bin/php/php7.4.27/bin/php -c "/Applications/MAMP/bin/php/php7.4.27/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php7.4.27/bin:$PATH
+# }
 
-function set80() {
-  alias php='/Applications/MAMP/bin/php/php8.0.13/bin/php -c "/Applications/MAMP/bin/php/php8.0.13/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.0.13/bin:$PATH
-}
+# function set80() {
+#   alias php='/Applications/MAMP/bin/php/php8.0.13/bin/php -c "/Applications/MAMP/bin/php/php8.0.13/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php8.0.13/bin:$PATH
+# }
 
-function set81() {
-  alias php='/Applications/MAMP/bin/php/php8.1.13/bin/php -c "/Applications/MAMP/bin/php/php8.1.13/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.1.13/bin:$PATH
-}
+# function set81() {
+#   alias php='/Applications/MAMP/bin/php/php8.1.13/bin/php -c "/Applications/MAMP/bin/php/php8.1.13/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php8.1.13/bin:$PATH
+# }
 
-function set82() {
-  alias php='/Applications/MAMP/bin/php/php8.2.4/bin/php -c "/Applications/MAMP/bin/php/php8.2.4/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.2.4/bin:$PATH
-}
+# function set82() {
+#   alias php='/Applications/MAMP/bin/php/php8.2.4/bin/php -c "/Applications/MAMP/bin/php/php8.2.4/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php8.2.4/bin:$PATH
+# }
 
-function set83() {
-  alias php='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
-  export PATH=/Applications/MAMP/bin/php/php8.3.0/bin:$PATH
-}
+# function set83() {
+#   alias php='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
+#   export PATH=/Applications/MAMP/bin/php/php8.3.0/bin:$PATH
+# }
