@@ -124,9 +124,8 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:yellow",
-
-          "template": "\n\n>"
+          "foreground": "p:white",
+          "template": "\n\n⚡\uFE0F"
         }
       ]
     }
