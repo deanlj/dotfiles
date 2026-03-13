@@ -29,31 +29,31 @@ alias copykey='command cat ~/.ssh/personal/deanlj.me.pub | pbcopy'
 alias makekey='ssh-keygen -t ed25519'
 
 # MAMP PHP Versions
-alias php71='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
-alias php72='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
-alias php73='/Applications/MAMP/bin/php/php7.3.29/bin/php -c "/Applications/MAMP/bin/php/php7.3.29/conf/php.ini"'
-alias php74='/Applications/MAMP/bin/php/php7.4.27/bin/php -c "/Applications/MAMP/bin/php/php7.4.27/conf/php.ini"'
+# alias php71='/Applications/MAMP/bin/php/php7.1.33/bin/php -c "/Applications/MAMP/bin/php/php7.1.33/conf/php.ini"'
+# alias php72='/Applications/MAMP/bin/php/php7.2.34/bin/php -c "/Applications/MAMP/bin/php/php7.2.34/conf/php.ini"'
+# alias php73='/Applications/MAMP/bin/php/php7.3.29/bin/php -c "/Applications/MAMP/bin/php/php7.3.29/conf/php.ini"'
+# alias php74='/Applications/MAMP/bin/php/php7.4.27/bin/php -c "/Applications/MAMP/bin/php/php7.4.27/conf/php.ini"'
 
-alias php80='/Applications/MAMP/bin/php/php8.0.13/bin/php -c "/Applications/MAMP/bin/php/php8.0.13/conf/php.ini"'
-alias php81='/Applications/MAMP/bin/php/php8.1.13/bin/php -c "/Applications/MAMP/bin/php/php8.1.13/conf/php.ini"'
-alias php82='/Applications/MAMP/bin/php/php8.2.4/bin/php -c "/Applications/MAMP/bin/php/php8.2.4/conf/php.ini"'
-alias php83='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
+# alias php80='/Applications/MAMP/bin/php/php8.0.13/bin/php -c "/Applications/MAMP/bin/php/php8.0.13/conf/php.ini"'
+# alias php81='/Applications/MAMP/bin/php/php8.1.13/bin/php -c "/Applications/MAMP/bin/php/php8.1.13/conf/php.ini"'
+# alias php82='/Applications/MAMP/bin/php/php8.2.4/bin/php -c "/Applications/MAMP/bin/php/php8.2.4/conf/php.ini"'
+# alias php83='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
 # alias php='/Applications/MAMP/bin/php/php8.3.0/bin/php -c "/Applications/MAMP/bin/php/php8.3.0/conf/php.ini"'
 
 
-alias pecl71='/Applications/MAMP/bin/php/php7.1.33/bin/pecl'
-alias pecl72='/Applications/MAMP/bin/php/php7.2.34/bin/pecl'
-alias pecl73='/Applications/MAMP/bin/php/php7.3.29/bin/pecl'
-alias pecl74='/Applications/MAMP/bin/php/php7.4.27/bin/pecl'
-alias pecl80='/Applications/MAMP/bin/php/php8.0.103/bin/pecl'
-alias pecl81='/Applications/MAMP/bin/php/php8.1.13/bin/pecl'
-alias pecl82='/Applications/MAMP/bin/php/php8.2.2/bin/pecl'
+# alias pecl71='/Applications/MAMP/bin/php/php7.1.33/bin/pecl'
+# alias pecl72='/Applications/MAMP/bin/php/php7.2.34/bin/pecl'
+# alias pecl73='/Applications/MAMP/bin/php/php7.3.29/bin/pecl'
+# alias pecl74='/Applications/MAMP/bin/php/php7.4.27/bin/pecl'
+# alias pecl80='/Applications/MAMP/bin/php/php8.0.103/bin/pecl'
+# alias pecl81='/Applications/MAMP/bin/php/php8.1.13/bin/pecl'
+# alias pecl82='/Applications/MAMP/bin/php/php8.2.2/bin/pecl'
 # alias pecl='/Applications/MAMP/bin/php/php8.3.0/bin/pecl'
 
-alias pear74='/Applications/MAMP/bin/php/php7.4.27/bin/pear'
-alias pear80='/Applications/MAMP/bin/php/php8.0.13/bin/pear'
-alias pear81='/Applications/MAMP/bin/php/php8.1.10/bin/pear'
-alias pear82='/Applications/MAMP/bin/php/php8.2.4/bin/pear'
+# alias pear74='/Applications/MAMP/bin/php/php7.4.27/bin/pear'
+# alias pear80='/Applications/MAMP/bin/php/php8.0.13/bin/pear'
+# alias pear81='/Applications/MAMP/bin/php/php8.1.10/bin/pear'
+# alias pear82='/Applications/MAMP/bin/php/php8.2.4/bin/pear'
 # alias pear='/Applications/MAMP/bin/php/php8.3.0/bin/pear'
 
 # PHP
@@ -139,3 +139,27 @@ alias npmspatie="npm config set registry https://npm.spatie.be"
 # Local Apps
 alias flash="cd ~/Sites/flashcards.club && set82 "
 alias dnsb="cd ~/Sites/dnsbackup-2024 && set83 "
+
+# Terraform and AWS CLI for LocalStack
+alias tf="tflocal "
+alias tform="terraform "
+alias tfinit="tflocal init "
+alias tfplan="tflocal plan "
+alias tfapply="tflocal apply "
+alias tfdestroy="tflocal destroy "
+alias tfoutput="tflocal output "
+alias tfstate="tflocal state "
+alias tfgraph="tflocal graph "
+alias tfvalidate="tflocal validate "
+alias tfws="tflocal workspace select "
+alias tfwsc="tflocal workspace new "
+alias tfwsl="tflocal workspace list "
+
+alias awsl="awslocal --endpoint-url=http://localhost:4566"
+alias lstack="docker run -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack"
+alias lstackup="docker run -d -p 4566:4566 -p 4510-4559:4510-4559 localstack/localstack"
+alias lstackdown="docker stop $(docker ps -aq --filter ancestor=localstack/localstack)"
+alias lstacklogs="docker logs -f $(docker ps -aq --filter ancestor=localstack/localstack)"
+alias lstackcli="docker exec -it $(docker ps -aq --filter ancestor=localstack/localstack) /bin/bash"
+
+alias serena="uv run --directory /Users/deanlj/Projects/serena serena start-mcp-server"

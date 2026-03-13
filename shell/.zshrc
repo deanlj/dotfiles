@@ -95,9 +95,8 @@ export PATH="$HOME/.yarn/bin:$PATH"
   
 
 #export PATH="/usr/local/opt/node@12/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:/opt/homebrew/opt/libpq/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 test -e "${HOME}/.dotfiles/shell/.iterm2_shell_integration.zsh" && source "${HOME}/.dotfiles/shell/.iterm2_shell_integration.zsh"
-
 
