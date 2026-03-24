@@ -10,12 +10,12 @@
     "yellow": "#F3AE35"
   },
   "secondary_prompt": {
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> ",
+    "template": "<p:yellow,transparent></><,p:yellow> > </><p:yellow,transparent></> ",
     "foreground": "p:black",
     "background": "transparent"
   },
   "transient_prompt": {
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> ",
+    "template": "<p:yellow,transparent></><,p:yellow> {{ .Folder }} </><p:yellow,transparent></> ",
     "foreground": "p:black",
     "background": "transparent"
   },
@@ -29,9 +29,9 @@
           "properties": {
             "cache_duration": "none"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b0",
-          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} ",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " {{ if .SSHSession }} {{ end }}{{ .UserName }} ",
           "foreground": "p:black",
           "background": "p:yellow",
           "type": "session",
@@ -42,9 +42,9 @@
             "cache_duration": "none",
             "style": "folder"
           },
-          "template": " \uea83 {{ path .Path .Location }} ",
+          "template": "  {{ path .Path .Location }} ",
           "foreground": "p:white",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "",
           "background": "p:orange",
           "type": "path",
           "style": "powerline"
@@ -56,9 +56,9 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
           "foreground": "p:black",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "",
           "background": "p:green",
           "type": "git",
           "style": "powerline",
@@ -78,9 +78,9 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \uf0e7 ",
+          "template": "  ",
           "foreground": "p:white",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "",
           "background": "p:yellow",
           "type": "root",
           "style": "powerline"
@@ -90,9 +90,9 @@
             "always_enabled": true,
             "cache_duration": "none"
           },
-          "leading_diamond": "<transparent,background>\ue0b0</>",
-          "trailing_diamond": "\ue0b4",
-          "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} ",
+          "leading_diamond": "<transparent,background></>",
+          "trailing_diamond": "",
+          "template": " {{ if gt .Code 0 }}{{ else }}{{ end }} ",
           "foreground": "p:white",
           "background": "p:blue",
           "type": "status",
@@ -103,10 +103,10 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
+            "cache_duration": "5m",
             "fetch_version": true
           },
-          "template": " \ue73d {{ .Full }}",
+          "template": "  {{ .Full }}",
           "foreground": "p:white",
           "background": "transparent",
           "type": "php",
@@ -114,13 +114,13 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
+            "cache_duration": "5m",
             "display_mode": "files",
             "fetch_package_manager": false,
             "fetch_version": true,
             "home_enabled": false
           },
-          "template": "  \ue718 {{ .Full }}",
+          "template": "   {{ .Full }}",
           "foreground": "p:white",
           "background": "transparent",
           "type": "node",
@@ -128,10 +128,10 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
+            "cache_duration": "5m",
             "fetch_version": true
           },
-          "template": " \ue626 {{ .Full }}",
+          "template": "  {{ .Full }}",
           "foreground": "p:white",
           "background": "transparent",
           "type": "go",
@@ -139,12 +139,12 @@
         },
         {
           "properties": {
-            "cache_duration": "none",
+            "cache_duration": "5m",
             "display_mode": "files",
             "fetch_version": true,
             "fetch_virtual_env": false
           },
-          "template": " \ue235 {{ .Full }}",
+          "template": "  {{ .Full }}",
           "foreground": "p:white",
           "background": "transparent",
           "type": "python",
@@ -154,7 +154,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": "\n\n⚡\ufe0f",
+          "template": "\n\n⚡️",
           "foreground": "p:whitegithub",
           "type": "text",
           "style": "plain"
@@ -168,9 +168,9 @@
       "properties": {
         "display_default": true
       },
-      "leading_diamond": "\ue0b0",
-      "trailing_diamond": "\ue0b4",
-      "template": " \ue7ad {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "  {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} ",
       "foreground": "p:white",
       "background": "p:orange",
       "type": "aws",
@@ -183,9 +183,9 @@
       "properties": {
         "display_default": true
       },
-      "leading_diamond": "\ue0b0",
-      "trailing_diamond": "\ue0b4",
-      "template": " \uebd8 {{ .Name }} ",
+      "leading_diamond": "",
+      "trailing_diamond": "",
+      "template": "  {{ .Name }} ",
       "foreground": "p:white",
       "background": "p:blue",
       "type": "az",

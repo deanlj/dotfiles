@@ -43,7 +43,8 @@ for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
 done
 unset file
 
-. $HOME/.dotfiles/shell/z.sh
+# z - directory jumping
+. $(brew --prefix)/etc/profile.d/z.sh
 
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
