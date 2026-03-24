@@ -44,7 +44,7 @@ done
 unset file
 
 # z - directory jumping
-. $(brew --prefix)/etc/profile.d/z.sh
+[ -f /opt/homebrew/etc/profile.d/z.sh ] && . /opt/homebrew/etc/profile.d/z.sh
 
 # Sudoless npm https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="${HOME}/.npm-packages"
