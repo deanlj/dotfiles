@@ -130,4 +130,4 @@ alias lstackdown='docker stop $(docker ps -aq --filter ancestor=localstack/local
 alias lstacklogs='docker logs -f $(docker ps -aq --filter ancestor=localstack/localstack)'
 alias lstackcli='docker exec -it $(docker ps -aq --filter ancestor=localstack/localstack) /bin/bash'
 
-alias serena="uv run --directory /Users/deanlj/Projects/serena serena start-mcp-server"
+alias serena="uv run --directory $HOME/Projects/serena serena start-mcp-server"
