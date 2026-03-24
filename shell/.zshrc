@@ -10,7 +10,7 @@ ZSH_THEME=""
 DEFAULT_USER=`whoami`
 
 # Which plugins would you like to load?
-plugins=(aliases ansible aws git colorize laravel5 composer copypath copyfile copybuffer dirhistory macos kubectl history emoji encode64 zsh-autosuggestions)
+plugins=(aliases ansible aws git colorize composer copypath copyfile copybuffer dirhistory macos kubectl history emoji encode64 zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
