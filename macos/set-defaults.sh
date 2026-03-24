@@ -7,9 +7,9 @@ echo 'start macos/set-defaults.sh'
 # Ask for the administrator password upfront
 sudo -v
 
-# Close any open System Preferences panes, to prevent them from overriding
+# Close any open System Settings panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -18,7 +18,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
+# Set computer name (as done via System Settings → Sharing)
 sudo scutil --set ComputerName "Macbook DeanLJ"
 sudo scutil --set HostName "Macbook DeanLJ"
 # sudo scutil --set LocalHostName "Macbook DeanLJ"
@@ -302,7 +302,7 @@ defaults write com.apple.screencapture "include-date" -bool false
 defaults write com.apple.screencapture "name" -string "screenshot"
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock and hot corners                                            #
 ###############################################################################
 
 # Prevent applications from bouncing in Dock
@@ -323,11 +323,8 @@ defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock persistent-apps -array ""
 defaults read com.apple.dock persistent-apps
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -355,7 +352,7 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 #  4: Desktop
 #  5: Start screen saver
 #  6: Disable screen saver
-#  7: Dashboard
+
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
@@ -497,7 +494,7 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+# Address Book, TextEdit, and Disk Utility                   #
 ###############################################################################
 
 # Use plain text mode for new TextEdit documents

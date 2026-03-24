@@ -1,0 +1,20 @@
+# Copy this file to ~/.dotfiles-custom/shell/.exports and fill in your values.
+# That file is sourced by .zshrc and is NOT committed to git.
+
+# Ngrok
+export NGROK_AUTH=
+
+# Stripe
+export SK_CS=
+export SK_PROD_CS=
+export SK_AM=
+export SK_PROD_AM=
+export SK_DNSB=
+export SK_PROD_DNSB=
+
+# Localstack
+DATA_DIR=$HOME/Dev/data/localstack
+export LOCALSTACK_API_KEY=""
+export AWS_ACCESS_KEY_ID="test"
+export AWS_SECRET_ACCESS_KEY="test"
+export AWS_DEFAULT_REGION="us-east-1"

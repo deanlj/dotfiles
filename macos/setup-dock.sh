@@ -21,17 +21,16 @@ defaults write com.apple.dock \
                persistent-apps -array "$(__dock_item '/Applications/Microsoft Outlook.app')" \
                                       "$(__dock_item /System/Applications/Calendar.app)" \
                                       "$(__dock_item /Applications/Bear.app)" \
-                                      "$(__dock_item /Applications/Notes.app)" \
+                                      "$(__dock_item /System/Applications/Notes.app)" \
                                       "$(__dock_item /Applications/BBEdit.app)" \
-                                      '$(__dock_item "/Applications/MAMP PRO.app")' \
-                                      '$(__dock_item "/Applications/Brave Browser.app")' \
-                                      "$(__dock_item /Applications/Trello.app)" \
+                                      "$(__dock_item '/Applications/Brave Browser.app')" \
+                                      "$(__dock_item /Applications/Notion.app)" \
                                       "$(__dock_item /Applications/Tinkerwell.app)" \
                                       "$(__dock_item /Applications/TablePlus.app)" \
                                       "$(__dock_item /Applications/Tower.app)" \
                                       "$(__dock_item /Applications/iTerm.app)" \
                                       "$(__dock_item /Applications/Slack.app)" \
-                                      "$(__dock_item /Applications/Lastpass.app)"
+                                      "$(__dock_item '/Applications/Visual Studio Code.app')"
 
 ###############################################################################
 # Kill Dock                                                #

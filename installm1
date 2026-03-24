@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setting up your M1 Mac..."
+echo "Installing Rosetta for Apple Silicon..."
 
-# Install Rosetta on M1
+# Install Rosetta on Apple Silicon Macs
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license

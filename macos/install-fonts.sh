@@ -6,7 +6,6 @@ echo 'start macos/install-fonts.sh'
 
 # Ask for the administrator password upfront
 sudo -v
-cd $HOME/.dotfiles
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
+
+# Install Nerd Font for oh-my-posh
+brew install font-meslo-lg-nerd-font
