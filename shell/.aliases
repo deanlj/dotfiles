@@ -131,3 +131,5 @@ alias lstacklogs='docker logs -f $(docker ps -aq --filter ancestor=localstack/lo
 alias lstackcli='docker exec -it $(docker ps -aq --filter ancestor=localstack/localstack) /bin/bash'
 
 alias serena="uv run --directory $HOME/Projects/serena serena start-mcp-server"
+
+alias cl="claude --channels plugin:fakechat@claude-plugins-official"
